@@ -49,9 +49,13 @@ public class TicTacToe {
         if (turn == 0) {
             if (newInput.equals("row1col1")) {
                 this.row1Col1 = 'O';
+            } else if (newInput.equals("row1col2")) {
+                this.row1Col2 = 'O';
             }
         } else if (turn == 1) {
-            this.nothing = 0;
+            if (newInput.equals("row1Col1")) {
+                this.nothing = 0;
+            }
         } else {
             this.nothing = 0;
         }

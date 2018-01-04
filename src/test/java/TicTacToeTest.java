@@ -29,4 +29,12 @@ public class TicTacToeTest {
         testTicTacToe.changeBoard("row1col1");
         assertEquals("O _ _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
+
+    @Test
+    public void getBoard_displayXonSecondTurn_OXDashes() throws Exception {
+        TicTacToe testTicTacToe = new TicTacToe("Start");
+        testTicTacToe.changeBoard("row1col2");
+        testTicTacToe.changeBoard("row1col1");
+        assertEquals("O X _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
+    }
 }
