@@ -3,7 +3,7 @@
  */
 public class TicTacToe {
     private boolean startGame = false;
-    private Object nothing;
+    private int nothing;
     private char row1Col1;
     private char row1Col2;
     private char row1Col3;
@@ -13,14 +13,18 @@ public class TicTacToe {
     private char row3Col1;
     private char row3Col2;
     private char row3Col3;
+    private int turn;
 
     public TicTacToe(String input) {
+        this.turn = 0;
         if (input.equals("Start") && !this.startGame) {
             this.startGame = true;
         } else if (input.equals("Quit")) {
             this.startGame = false;
+        } else if (input.equals("row1col1") && this.turn == 0) {
+            this.row1Col1 = 'O';
         } else {
-            this.nothing = null;
+            this.nothing = 0;
         }
         this.row1Col1 = '_';
         this.row1Col2 = '_';
@@ -38,7 +42,7 @@ public class TicTacToe {
     }
 
     public String getBoard() {
-        return "poop";
+        return String.format("%s %s %s\n%s %s %s\n%s %s %s", this.row1Col1, this.row1Col2, this.row1Col3, this.row2Col1, this.row2Col2, this.row2Col3, this.row3Col1, this.row3Col2, this.row3Col3);
     }
 
 

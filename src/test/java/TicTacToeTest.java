@@ -18,8 +18,14 @@ public class TicTacToeTest {
     }
 
     @Test
-    public void TicTacToe_displayEmptyBoard_lotsOfDashes() throws Exception {
+    public void getBoard_displayEmptyBoard_lotsOfDashes() throws Exception {
         TicTacToe testTicTacToe = new TicTacToe("Start");
-        assertEquals("_ _ _\n_ _ _\n_ _ _",testTicTacToe.getBoard());
+        assertEquals("_ _ _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
+    }
+
+    @Test
+    public void getBoard_displayOonFirstTurn_OandDashes() throws Exception {
+        TicTacToe testTicTacToe = new TicTacToe("Start");
+        assertEquals("O _ _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
 }
