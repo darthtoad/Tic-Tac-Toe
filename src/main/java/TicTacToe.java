@@ -45,5 +45,17 @@ public class TicTacToe {
         return String.format("%s %s %s\n%s %s %s\n%s %s %s", this.row1Col1, this.row1Col2, this.row1Col3, this.row2Col1, this.row2Col2, this.row2Col3, this.row3Col1, this.row3Col2, this.row3Col3);
     }
 
+    public void changeBoard(String newInput) {
+        if (turn == 0) {
+            if (newInput.equals("row1col1")) {
+                this.nothing = 0;
+            }
+        } else if (turn == 1) {
+            this.nothing = 0;
+        } else {
+            this.nothing = 0;
+        }
+    }
+
 
 }

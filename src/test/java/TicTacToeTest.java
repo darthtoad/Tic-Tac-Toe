@@ -26,6 +26,7 @@ public class TicTacToeTest {
     @Test
     public void getBoard_displayOonFirstTurn_OandDashes() throws Exception {
         TicTacToe testTicTacToe = new TicTacToe("Start");
+        testTicTacToe.changeBoard("row1col1");
         assertEquals("O _ _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
 }
