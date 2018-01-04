@@ -35,6 +35,6 @@ public class TicTacToeTest {
         TicTacToe testTicTacToe = new TicTacToe("Start");
         testTicTacToe.changeBoard("row1col2");
         testTicTacToe.changeBoard("row1col1");
-        assertEquals("O X _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
+        assertEquals("X O _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
 }

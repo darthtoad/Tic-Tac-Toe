@@ -46,15 +46,16 @@ public class TicTacToe {
     }
 
     public void changeBoard(String newInput) {
-        if (turn == 0) {
+        if (this.turn == 0) {
+            this.turn++;
             if (newInput.equals("row1col1")) {
                 this.row1Col1 = 'O';
             } else if (newInput.equals("row1col2")) {
                 this.row1Col2 = 'O';
             }
-        } else if (turn == 1) {
-            if (newInput.equals("row1Col1")) {
-                this.nothing = 0;
+        } else if (this.turn == 1) {
+            if (newInput.equals("row1col1")) {
+                this.row1Col1 = 'X';
             }
         } else {
             this.nothing = 0;
