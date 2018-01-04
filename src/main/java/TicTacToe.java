@@ -16,7 +16,7 @@ public class TicTacToe {
 
     public TicTacToe(String input) {
         if (input.equals("Start") && !this.startGame) {
-            this.startGame = false;
+            this.startGame = true;
         } else if (input.equals("Quit")) {
             this.startGame = false;
         } else {
