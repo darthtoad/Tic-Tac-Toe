@@ -11,4 +11,9 @@ public class TicTacToeTest {
         TicTacToe testTicTacToe = new TicTacToe("");
         assertEquals(true, testTicTacToe instanceof TicTacToe);
     }
+    @Test
+    public void TicTacToe_startGameOnStart_true() throws Exception {
+        TicTacToe testTicTacToe = new TicTacToe("Start");
+        assertEquals(true, testTicTacToe.getStartGame());
+    }
 }
