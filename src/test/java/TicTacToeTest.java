@@ -37,4 +37,12 @@ public class TicTacToeTest {
         testTicTacToe.changeBoard("row1col1");
         assertEquals("X O _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
+
+    @Test
+    public void getTurn_turnRemainsSameIfSpaceIsTaken_1() {
+        TicTacToe testTicTacToe = new TicTacToe("Start");
+        testTicTacToe.changeBoard("row1col1");
+        testTicTacToe.changeBoard("row1col1");
+        assertEquals(1, testTicTacToe.getTurn());
+    }
 }

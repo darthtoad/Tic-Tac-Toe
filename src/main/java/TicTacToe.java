@@ -21,8 +21,6 @@ public class TicTacToe {
             this.startGame = true;
         } else if (input.equals("Quit")) {
             this.startGame = false;
-        } else if (input.equals("row1col1") && this.turn == 0) {
-            this.row1Col1 = 'O';
         } else {
             this.nothing = 0;
         }
@@ -41,6 +39,10 @@ public class TicTacToe {
         return this.startGame;
     }
 
+    public int getTurn() {
+        return this.turn;
+    }
+
     public String getBoard() {
         return String.format("%c %c %c\n%c %c %c\n%c %c %c", this.row1Col1, this.row1Col2, this.row1Col3, this.row2Col1, this.row2Col2, this.row2Col3, this.row3Col1, this.row3Col2, this.row3Col3);
     }
@@ -54,6 +56,7 @@ public class TicTacToe {
                 this.row1Col2 = 'O';
             }
         } else if (this.turn == 1) {
+            this.turn--;
             if (newInput.equals("row1col1")) {
                 this.row1Col1 = 'X';
             }
