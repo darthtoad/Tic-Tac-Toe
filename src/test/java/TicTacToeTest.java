@@ -26,34 +26,34 @@ public class TicTacToeTest {
     @Test
     public void getBoard_displayOonFirstTurn_OandDashes() throws Exception {
         TicTacToe testTicTacToe = new TicTacToe("Start");
-        testTicTacToe.changeBoard("row1col1");
+        testTicTacToe.changeBoard("row1Col1");
         assertEquals("O _ _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
 
     @Test
     public void getBoard_displayXonSecondTurn_OXDashes() throws Exception {
         TicTacToe testTicTacToe = new TicTacToe("Start");
-        testTicTacToe.changeBoard("row1col2");
-        testTicTacToe.changeBoard("row1col1");
+        testTicTacToe.changeBoard("row1Col2");
+        testTicTacToe.changeBoard("row1Col1");
         assertEquals("X O _\n_ _ _\n_ _ _", testTicTacToe.getBoard());
     }
 
     @Test
     public void getTurn_turnRemainsSameIfSpaceIsTaken_1() {
         TicTacToe testTicTacToe = new TicTacToe("Start");
-        testTicTacToe.changeBoard("row1col1");
-        testTicTacToe.changeBoard("row1col1");
+        testTicTacToe.changeBoard("row1Col1");
+        testTicTacToe.changeBoard("row1Col1");
         assertEquals(1, testTicTacToe.getTurn());
     }
 
     @Test
     public void getWinner_returnWinnerPlayerNumberWhenGameIsWon_1() {
         TicTacToe testTicTacToe = new TicTacToe("Start");
-        testTicTacToe.changeBoard("row1col1");
-        testTicTacToe.changeBoard("row3col3");
-        testTicTacToe.changeBoard("row1col2");
-        testTicTacToe.changeBoard("row3col2");
-        testTicTacToe.changeBoard("row1col3");
+        testTicTacToe.changeBoard("row1Col1");
+        testTicTacToe.changeBoard("row3Col3");
+        testTicTacToe.changeBoard("row1Col2");
+        testTicTacToe.changeBoard("row3Col2");
+        testTicTacToe.changeBoard("row1Col3");
         assertEquals(1, testTicTacToe.getWinner());
     }
 }
