@@ -45,4 +45,15 @@ public class TicTacToeTest {
         testTicTacToe.changeBoard("row1col1");
         assertEquals(1, testTicTacToe.getTurn());
     }
+
+    @Test
+    public void getWinner_returnWinnerPlayerNumberWhenGameIsWon_1() {
+        TicTacToe testTicTacToe = new TicTacToe("Start");
+        testTicTacToe.changeBoard("row1col1");
+        testTicTacToe.changeBoard("row3col3");
+        testTicTacToe.changeBoard("row1col2");
+        testTicTacToe.changeBoard("row3col2");
+        testTicTacToe.changeBoard("row1col3");
+        assertEquals(1, testTicTacToe.getWinner());
+    }
 }

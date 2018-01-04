@@ -14,9 +14,11 @@ public class TicTacToe {
     private char row3Col2;
     private char row3Col3;
     private int turn;
+    private int winner;
 
     public TicTacToe(String input) {
         this.turn = 0;
+        this.winner = -1;
         if (input.equals("Start") && !this.startGame) {
             this.startGame = true;
         } else if (input.equals("Quit")) {
@@ -45,6 +47,10 @@ public class TicTacToe {
 
     public String getBoard() {
         return String.format("%c %c %c\n%c %c %c\n%c %c %c", this.row1Col1, this.row1Col2, this.row1Col3, this.row2Col1, this.row2Col2, this.row2Col3, this.row3Col1, this.row3Col2, this.row3Col3);
+    }
+
+    public int getWinner() {
+        return this.winner;
     }
 
     public void changeBoard(String newInput) {
