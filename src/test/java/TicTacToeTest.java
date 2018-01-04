@@ -16,4 +16,10 @@ public class TicTacToeTest {
         TicTacToe testTicTacToe = new TicTacToe("Start");
         assertEquals(true, testTicTacToe.getStartGame());
     }
+
+    @Test
+    public void TicTacToe_displayEmptyBoard_lotsOfDashes() throws Exception {
+        TicTacToe testTicTacToe = new TicTacToe("Start");
+        assertEquals("_ _ _\n_ _ _\n_ _ _",testTicTacToe.getBoard());
+    }
 }
