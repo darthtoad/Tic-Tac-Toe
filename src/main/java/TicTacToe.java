@@ -89,6 +89,15 @@ public class TicTacToe {
         return this.winner;
     }
 
+    public void setStartGame() {
+        if (this.startGame) {
+            this.startGame = false;
+        }
+        if (!this.startGame) {
+            this.startGame = true;
+        }
+    }
+
     public void changeBoard(String newInput) {
         if (this.turn == 0) {
             this.turn++;
@@ -139,8 +148,40 @@ public class TicTacToe {
         } else {
             this.nothing = 0;
         }
-        if (row1Col1 == 'O' && row1Col2 == 'O' && row1Col3 == 'O') {
+        if (this.row1Col1 == 'O' && this.row1Col2 == 'O' && this.row1Col3 == 'O') {
             this.winner = 1;
+        } else if (this.row1Col1 == 'X' && this.row1Col2 == 'X' && this.row1Col3 == 'X') {
+            this.winner = 2;
+        } else if (this.row1Col1 == 'O' && this.row2Col1 == 'O' && this.row3Col1 == 'O') {
+            this.winner = 1;
+        } else if (this.row1Col1 == 'X' && this.row2Col1 == 'X' && this.row3Col1 == 'X') {
+            this.winner = 2;
+        } else if (this.row1Col1 == 'O' && this.row2Col2 == 'O' && this.row3Col3 == 'O') {
+            this.winner = 1;
+        } else if (this.row1Col1 == 'X' && this.row2Col2 == 'X' && this.row3Col3 == 'X') {
+            this.winner = 2;
+        } else if (this.row1Col2 == 'O' && this.row2Col2 == 'O' && this.row3Col2 == 'O') {
+            this.winner = 1;
+        } else if (this.row1Col2 == 'X' && this.row2Col2 == 'X' && this.row3Col2 == 'X') {
+            this.winner = 2;
+        } else if (this.row1Col3 == 'O' && this.row2Col3 == 'O' && this.row3Col3 == 'O') {
+            this.winner = 1;
+        } else if (this.row1Col3 == 'X' && this.row2Col3 == 'X' && this.row3Col3 == 'X') {
+            this.winner = 2;
+        } else if (this.row1Col3 == 'O' && this.row2Col2 == 'O' && this.row3Col1 == 'O') {
+            this.winner = 1;
+        } else if (this.row1Col3 == 'X' && this.row2Col2 == 'X' && this.row3Col1 == 'X') {
+            this.winner = 2;
+        } else if (this.row2Col1 == 'O' && this.row2Col2 == 'O' && this.row2Col3 == 'O') {
+            this.winner = 1;
+        } else if (this.row2Col1 == 'X' && this.row2Col2 == 'X' && this.row2Col3 == 'X') {
+            this.winner = 2;
+        } else if (this.row3Col1 == 'O' && this.row3Col2 == 'O' && this.row3Col3 == 'O') {
+            this.winner = 1;
+        } else if (this.row3Col1 == 'X' && this.row3Col2 == 'X' && this.row3Col3 == 'X') {
+            this.winner = 2;
+        } else {
+            this.winner = -1;
         }
     }
 
