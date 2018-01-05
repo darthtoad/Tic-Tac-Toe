@@ -180,6 +180,8 @@ public class TicTacToe {
             this.winner = 1;
         } else if (this.row3Col1 == 'X' && this.row3Col2 == 'X' && this.row3Col3 == 'X') {
             this.winner = 2;
+        } else if (this.row1Col1 != '_' && this.row1Col2 != '_' && this.row1Col3 != '_' && this.row2Col2 != '_' && this.row2Col3 != '_' && this.row3Col1 != '_' && this.row3Col2 != '_' && this.row3Col3 != '_') {
+            this.winner = 0;
         } else {
             this.winner = -1;
         }

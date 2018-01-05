@@ -30,6 +30,10 @@ public class App {
                             System.out.println("Player 2 has won!");
                             thisGame = false;
                         }
+                        if (newTicTacToe.getWinner() == 0) {
+                            System.out.println("You have tied!");
+                            thisGame = false;
+                        }
                     }
                 } else if (input.equals("No")) {
                     System.out.println("Goodbye!");
